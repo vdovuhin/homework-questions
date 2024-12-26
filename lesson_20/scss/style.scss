@@ -55,13 +55,17 @@ body {
 @import "_header.scss";
 /* Стилів main */
 .page {
-
+	& > *:not(:last-child){
+		margin-block-end: 6.25rem;
+		
+	}
 	// .page__hero
 
 	&__hero {
 		margin-block-end: 13.25rem;
 		padding-block-start: 7.75rem;
 		background-color: #FFF;
+		
 		@media (max-width: 57.125rem){
 			padding-block-start: 3.75rem;
 		}
@@ -69,38 +73,35 @@ body {
 			padding-block-start: 1.875rem;
 		}
 	}
+
+	// .page__proces
+
+	&__proces {
+		margin-block-start: -248px;
+		padding-block-start: 15.5rem;
+		padding-block-end: 1.5rem;
+		background-color: #F0F1F3;
+			
+	}
+
+	// .page__portfolio
+
+	&__portfolio {
+		padding-block-start: 6.25rem;
+	}
+
+	// .page__project
+
+	&__project {
+		background: #132238;
+		padding-block: 6.25rem;
+		padding-inline: 21.875rem;
+	}
+
 }
+
 .hero {
-	position: relative;
-
-	&::before,&::after{
-		content:'';	
-	}
-
-	&::before{
-		border-radius: 1044.316px;
-		background: rgba(196, 245, 233, 0.70);
-		filter: blur(300px);
-		width: 100%;
-		height: 100%;
-
-		position: absolute;
-		right: 1450px;
-		bottom: 0;
-
-	}
-	&::after{		
-		border-radius: 541px;
-		background: linear-gradient(182deg, #FFDFA8 -157.44%, rgba(255, 226, 176, 0.96) -157.4%, rgba(255, 234, 198, 0.67) 216.94%, rgba(250, 211, 144, 0.80) 216.94%);
-		filter: blur(100px);
-		width: 100%;
-		height: 100%;
-
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		z-index: -1;
-	}
+	
 
 
 	// .hero__container
@@ -261,6 +262,7 @@ body {
 			flex-basis: 50%;
 		}
 	}
+	
 
 	// .designtr__section
 
@@ -300,22 +302,321 @@ body {
 	// .designtr__item
 
 	&__item {
-		flex-basis: 48px;
-		padding: 1rem;
+		
+		//padding: 16px;
 		box-shadow: 0px 12px 64px 0px rgba(28, 25, 25, 0.12);
-		border-radius: 4px;
-		&:nth-child(4){
-			
-			background-color: #A53DFF;
-
+		border-radius: 4px;	
+		&:hover{			
+			background-color:  #A53DFF;			
 		}
-	}
+}
+	
 
 	// .designtr__button
 
 	&__button {
+		padding: 1rem;
+		svg {
+			fill: #A53DFF;		
+		}
+		&:hover{			
+			background-color:  #A53DFF;
+			svg {
+							
+					fill: #FFF;			
+				}			
+		}
+		
+	}
+
+}
+
+.proces {
+	// .proces__container
+
+	&__container{		
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-content: center;
+		align-items: center;
+		column-gap: 8.9375rem;
+		@media (max-width: 62.5rem){
+			column-gap: 4.375rem;
+		}
+		@media (max-width: 56.25rem){
+			grid-template-columns: 1fr;
+		}
+	}
+
+	// .proces__content
+
+	&__content {
+	}
+
+	// .proces__cards
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+		@media (max-width: 35rem){
+			grid-template-columns: 1fr;
+			gap: 0.9rem;
+		}
+	}
+
+	// .proces__card
+
+	&__card {
+		padding: 2rem;
+			
+		
+	}
+
+	// .proces__icons
+
+	&__icons {
+		display: inline-block;
+		margin-block-end: 2rem;
+		padding: 1.25rem;	
+		border-radius: 12px;			
+		box-shadow: 32px 32px 124px 0px rgba(43, 56, 76, 0.10);			
+		svg {						
+			fill: #A53DFF;					
+		}
+		&--activ{			
+			background-color:  #A53DFF;			
+			 svg{					
+					fill: #fff;
+				}
+			}	
+		
+		
+	}
+
+	// .proces__titel
+
+	&__titel {
+		margin-block-end: 0.75rem;
+		color: #132238;
+		font-size: 1.25rem;	
+		font-weight: 600;
+		line-height: 1.2; /* 120% */
+	}
+
+	// .proces__text
+
+	&__text {
+		color: #556070;
+		line-height: 24px; /* 150% */
 	}
 }
+
+
+.portfolio {
+
+	// .portfolio__container
+
+	&__container {
+		display: grid;
+		justify-items: center;
+		
+	}
+
+	// .portfolio__content
+
+	&__content {
+		text-align: center;
+		margin-block-end: 4.375rem;			
+	}	
+	
+
+	// .portfolio__products
+
+	&__products {
+		margin-block-end: 3.125rem;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+		@media (max-width: 58.25rem){
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: 565px){
+			grid-template-columns: 1fr;
+		}	
+
+	}
+
+	// .portfolio__product
+
+	&__product {
+		display: grid;
+		
+		& > * {
+			margin-block-end: 2rem;
+		}
+		
+	}
+
+	// .portfolio__button
+
+	&__button {
+		display: inline-block;
+		border-radius: 4px;
+		background-color: #A53DFF;
+		padding: 0.75rem 1.5rem;
+		text-align: center
+		
+	}
+}
+
+.product {
+
+	// .product__img
+
+	&__img {
+		img{
+			width: 100%;
+			height: 100%;			
+			object-fit: contain;
+		}
+	}
+
+	// .product__content
+
+	&__content {
+		padding-inline: 2rem;
+	}
+
+	// .product__sab-titel
+
+	&__sab-titel {
+		color: #87909D;
+		font-size: 0.75rem;
+		font-weight: 500;
+		line-height: 1.3333; /* 133.333% */
+
+	}
+
+	// .product__titel
+
+	&__titel {
+		color: #132238;
+		font-size: 1.125rem;
+		font-weight: 600;
+		line-height: 1.3333; /* 133.333% */
+		margin-block-end: 0.75rem;
+	}
+
+	// .product__text
+
+	&__text {
+		margin-block-end: 1.25rem;
+		color: #556070;	
+		font-size: 0.875rem;		
+		font-weight: 400;
+		line-height: 1.42857; /* 142.857% */
+	}
+
+	// .product__button
+
+	&__button {
+		display: inline-block;
+		border-radius: 4px;
+		border: 1px solid var(--Primary-500, #A53DFF);
+		background: var(--Gray-White, #FFF);
+		padding: 12px 24px;
+		text-align: center;	
+
+		position: relative;
+		
+		&--icons{
+			display: inline-flex;
+			align-items: center;
+			justify-content: flex-start;
+
+			
+			&::after{
+				content:'';
+				
+				background-image: url(../img/svg/arrow.svg);
+				background-repeat: no-repeat;
+				background-position: right center;
+				
+				width: 24px;
+				height: 24px;
+
+		
+			}
+		
+		}
+	}
+			
+	
+}
+
+.page {
+
+	
+}
+.project {
+
+	// .project__container
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+
+		@media (min-width: 40.625rem){
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		row-gap: 2rem;	
+		}	
+	}	
+
+	// .project__content
+
+	&__content {
+		flex-shrink: 1;
+		@media (min-width: 40.625rem){
+			display: grid;		
+		align-items: center;
+		justify-content: center;
+			grid-template-columns: 38.8125rem;			
+		}		
+		& > *:not(:last-child){
+			margin-block-end: 2rem;
+		}
+		.content__titel{		
+			color: #FFF;			
+		}
+	}
+
+		// .portfolio__button
+
+		&__button {
+			padding-inline: 1.5rem;
+			padding-block: 0.75rem;
+
+			align-self: center;
+			justify-self: center;
+
+			display: flex;			
+			justify-content: center;
+			align-items: center;
+			column-gap: 0.75rem;
+			.button{
+				//flex-shrink: 1;
+			}
+		}
+}
+
+
+
+
+
 
 
 
@@ -327,8 +628,3 @@ body {
 
 /* Стилів footer */
 @import "_footer.scss";
-
-
-
-
-
