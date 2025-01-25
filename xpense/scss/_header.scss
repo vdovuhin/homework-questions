@@ -1,0 +1,176 @@
+.header {
+	// .header__container
+
+	&__container {
+		padding-block: toRem(10);
+		min-height: toRem(150);
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: toRem(10);
+
+		@media (max-width: toRem(653)) {
+			min-height: toRem(70);
+		}
+	}
+
+	// .header__logo
+
+	&__logo {
+		flex-basis: toRem(115);
+
+		position: relative;
+		z-index: 3;
+
+		@media (max-width: toRem(653)) {
+			order: 1;
+		}
+	}
+
+	// .header__menu
+
+	&__menu {
+		display: flex;
+		
+		@media (max-width: toRem(653)) {
+			order: 3;
+			margin-inline-end: toRem(20);
+		}
+	}
+
+	// .header__button
+
+	&__button {
+		flex-basis: toRem(115);
+		flex-shrink: 0;
+
+		position: relative;
+		z-index: 3;
+
+		@media (max-width: toRem(653)) {
+			order: 2;			
+		}
+	}
+	
+}
+
+
+
+.menu {
+
+	// .menu__icon
+
+	&__icon {
+		position: relative;
+		z-index: 3;
+	}
+
+	// .menu__body
+
+	&__body {
+
+		@media (max-width: toRem(653)){
+			position: fixed;
+			inset-inline-start: 100%;
+			inset-block-start: 0;
+			inline-size: 100%;
+			block-size: 100%;
+			z-index: 2;
+
+			overflow: auto;
+
+			padding: toRem(70) toRem(15) toRem(30);
+
+			background-color: #546232;
+			&::before {
+				content: '';
+				position: fixed;				
+				block-size: toRem(70);
+				inline-size: 100%;
+				inset-inline-start: 100%;
+				inset-block-start: 0;
+				z-index: 100;			
+				background-color: #623232;
+			}
+			
+			
+		}		
+	}
+		// 
+
+	// .menu__list
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: center;		
+		flex-wrap: wrap;
+		column-gap: toRem(40);
+		row-gap: toRem(3);
+		@media (max-width:toRem(652)) {
+			flex-direction: column;
+			background-color: transparent;
+			align-items: flex-end;
+			row-gap: toRem(20);
+		}
+	}
+
+	// .menu__item
+
+	&__item {
+		text-align: center;
+	}
+
+	// .menu__link
+
+	&__link {			
+		font-size: toRem(18);			
+		line-height: 0,95;/* 17.1px */
+		&:hover{
+			text-decoration: underline;
+		}
+		@media (max-width:toRem(652)) {
+			font-size: toRem(25);
+		}
+	}
+}
+.open-menu{
+	& .menu__body	{
+		
+				inset-inline-start: 0;
+			}
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: toRem(653)) {
+	@import "component/menu.scss";
+}
+
+
+
+
+
+
+
+
+
+
+/*
+@media (max-width: toRem(1139)){
+	@import "component/menu.scss";
+}
+*/

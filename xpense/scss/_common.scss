@@ -1,0 +1,19 @@
+.logo {		
+	font-size: toRem(23);	
+	font-weight: 500;
+	line-height: 0.95;/* 21.85px */
+	span{
+		margin-inline-end: toRem(12);
+		padding: toRem(6) toRem(13) toRem(8) toRem(14);
+		
+		color: #FFF;
+		font-size: toRem(24);
+		font-weight: 700;
+
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background-color: #FF7235;	
+	}
+}
+//.button {}

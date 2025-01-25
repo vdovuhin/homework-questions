@@ -1,0 +1,233 @@
+@charset "UTF-8";
+/* Підключення фрифтів */
+@import url("https://fonts.googleapis.com/css?family=Hind+Siliguri:300,regular,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:regular,500,600&display=swap");
+/* Google Fonts (Plugin) */
+/* Локальне підключення шрифтів */
+@import url("reset.css");
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* .... */
+/* Скидання стилів */
+/* Основні стилі */
+body {
+  font-family: "Hind+Siliguri";
+  color: #292830;
+  font-size: 1.125rem;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip; /* clip */
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper > main {
+  flex-grow: 1;
+}
+
+/* --------------------- */
+[class*=__container] {
+  max-width: 71.1875rem;
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 15px;
+}
+
+/* --------------------- */
+/* БЕМ елементі @import */
+.logo {
+  font-size: 1.4375rem;
+  font-weight: 500;
+  line-height: 0.95; /* 21.85px */
+}
+.logo span {
+  margin-inline-end: 0.75rem;
+  padding: 0.375rem 0.8125rem 0.5rem 0.875rem;
+  color: #FFF;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FF7235;
+}
+
+/* --------------------- */
+/* Стилів header */
+.header__container {
+  padding-block: 0.625rem;
+  min-height: 9.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.625rem;
+}
+@media (max-width: 40.8125rem) {
+  .header__container {
+    min-height: 4.375rem;
+  }
+}
+.header__logo {
+  flex-basis: 7.1875rem;
+  position: relative;
+  z-index: 3;
+}
+@media (max-width: 40.8125rem) {
+  .header__logo {
+    order: 1;
+  }
+}
+.header__menu {
+  display: flex;
+}
+@media (max-width: 40.8125rem) {
+  .header__menu {
+    order: 3;
+    margin-inline-end: 1.25rem;
+  }
+}
+.header__button {
+  flex-basis: 7.1875rem;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 3;
+}
+@media (max-width: 40.8125rem) {
+  .header__button {
+    order: 2;
+  }
+}
+
+.menu__icon {
+  position: relative;
+  z-index: 3;
+}
+@media (max-width: 40.8125rem) {
+  .menu__body {
+    position: fixed;
+    inset-inline-start: 100%;
+    inset-block-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    z-index: 2;
+    overflow: auto;
+    padding: 4.375rem 0.9375rem 1.875rem;
+    background-color: #546232;
+  }
+  .menu__body::before {
+    content: "";
+    position: fixed;
+    block-size: 4.375rem;
+    inline-size: 100%;
+    inset-inline-start: 100%;
+    inset-block-start: 0;
+    z-index: 100;
+    background-color: #623232;
+  }
+}
+.menu__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
+  row-gap: 0.1875rem;
+}
+@media (max-width: 40.75rem) {
+  .menu__list {
+    flex-direction: column;
+    background-color: transparent;
+    align-items: flex-end;
+    row-gap: 1.25rem;
+  }
+}
+.menu__item {
+  text-align: center;
+}
+.menu__link {
+  font-size: 1.125rem;
+  line-height: 0, 95; /* 17.1px */
+}
+.menu__link:hover {
+  text-decoration: underline;
+}
+@media (max-width: 40.75rem) {
+  .menu__link {
+    font-size: 1.5625rem;
+  }
+}
+
+.open-menu .menu__body {
+  inset-inline-start: 0;
+}
+
+@media (max-width: 40.8125rem) {
+  .icon-menu {
+    flex-shrink: 0;
+    flex-basis: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .icon-menu span {
+    margin-block: 0.375rem;
+  }
+  .icon-menu span, .icon-menu::before, .icon-menu::after {
+    transition: all 0.3s;
+    content: "";
+    flex-basis: 2px;
+    width: 100%;
+    background-color: #1a1818;
+  }
+  .open-menu {
+    /*
+    & .menu__body {
+    	&:before {}
+    	//inset-inline-start: 0;
+    }
+    */
+  }
+  .open-menu .icon-menu {
+    justify-content: center;
+  }
+  .open-menu .icon-menu span {
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+  .open-menu .icon-menu::before {
+    transform: rotate(45deg) translateY(0.1875rem);
+  }
+  .open-menu .icon-menu::after {
+    transform: rotate(-45deg) translateY(-0.1875rem);
+  }
+}
+/*
+@media (max-width: toRem(1139)){
+	@import "component/menu.scss";
+}
+*/
+/* Стилів footer */
+/* --------------------- */
+/* Стилів main */
