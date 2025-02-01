@@ -16,4 +16,52 @@
 		background-color: #FF7235;	
 	}
 }
-//.button {}
+.button {
+	
+}
+
+.active {
+	border-radius: 8px;
+	border: 1px solid #FF7235;
+	
+	background-color: #FF7235;
+	padding-block: toRem(10);
+	padding-inline: toRem(17) toRem(14);
+	font-weight: 600;
+	
+	transition: background-color 0.5s;
+
+	color: #FFF;
+	font-size: toRem(16);
+	transition: color 0.5s;
+	&:hover{
+		color: #FF7235;
+		background-color: #FFF;
+	}
+}
+
+.content {
+
+	// .content__blok
+
+	&__blok {}
+
+	// .content__title
+
+	&__title {
+		color:  #292830;
+		@mixin adaptiveValue("font-size", 96, 18);
+		//font-size: toRem(96);		
+		font-weight: 700;
+		margin-block-end: toRem(20);
+	}
+
+	// .content__text
+
+	&__text {
+		color:  #BDBDBD;
+		font-size: toRem(24);	
+		margin-block-end: toRem(40);
+	}
+}
+

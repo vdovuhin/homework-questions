@@ -1,6 +1,191 @@
+.footer {
+
+	// .footer__container
+
+	&__container {
+		display: grid;
+		row-gap: toRem(40);
+	}
+
+	// .footer__blok
+
+	&__blok {
+		display: flex;		
+
+		column-gap: toRem(175);
+		row-gap: toRem(15);
+		&:last-child {
+			justify-content: end;
+		}
+		@media (max-width: toRem(900)){
+			column-gap: toRem(90);
+		}
+		@media (max-width: toRem(600)) {
+			display: grid;
+			justify-content: center;
+		}
+		
+	}
+
+	// .footer__logo
+
+	&__logo {}
+
+	// .footer__colums
+
+	&__colums {
+		flex-grow: 1;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		row-gap: toRem(10);	
+		column-gap: toRem(18);
+		@media (max-width: toRem(555)) {
+			flex-direction: column;
+		}
+	}
+
+	// .footer__colum
+
+	&__colum {		
+		column-gap: toRem(10);		
+	}
+
+	// .footer__link-colum
+
+	&__link-colum {
+		margin-block-end: toRem(24);
+		color: #292830;			
+		font-size: toRem(24);			
+		font-weight: 500;	
+		text-transform: uppercase;
+	}
+
+	// .footer__row
+
+	&__row {
+		display: grid;
+		row-gap: toRem(8);
+		@media (max-width: toRem(555)) {
+			display: none;
+		}
+	}
+
+	// .footer__form
+
+	&__form {}
+
+	// .footer__footer
+
+	&__footer {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		row-gap: toRem(15);
+		:last-child{
+			justify-items: end;
+		}
+
+		@media (max-width: toRem(735)) {
+			grid-template-columns: repeat(2, 1fr);
+			
+		}
+		@media (max-width: toRem(522)) {
+			grid-template-columns: 1fr;
+			justify-items: center;
+		}
+		
+	}
+
+	// .footer__items
+
+	&__items {
+		display: flex;
+		column-gap: toRem(24);
+	}
+
+	// .footer__item
+
+	&__item {}
+
+	// .footer__copy
+
+	&__copy {}
+
+	// .footer__list
+
+	&__list {
+		justify-content: end;
+	}
+
+	// .footer__social
+
+	&__social {}
+}
 
 
 
+.row-footer {
+
+	// .row-footer__item
+
+	&__item {}
+
+	// .row-footer__link
+
+	&__link {
+		color: #292830;
+		font-size: toRem(18);		
+		font-weight: 500;			
+	}
+}
+
+.form-footer {
+
+	// .form-footer__text
+
+	&__text {
+		color:  #BDBDBD;			
+		font-size: toRem(14);
+		&:not(:last-child) {
+			margin-block-end: toRem(18);
+		}
+		
+	}
+
+	// .form-footer__colum
+
+	&__colum {
+		display: flex;
+		justify-content: center;
+		
+
+		border-radius: 8px;
+		border: 1px solid var(--Dark, #292830);
+		padding-block: toRem(7);
+		padding-inline: toRem(23) toRem(6);
+		margin-block-end: toRem(10);
+	}
+
+	// .form-footer__input
+
+	&__input {
+		color: #292830;
+		font-size: toRem(18);
+		font-size: 18px;
+	}
+
+	// .form-footer__button
+
+	&__button {
+
+
+		&:hover {
+				background-color: #fff;
+			}
+	}
+}
+
+.social {}
 
 
 

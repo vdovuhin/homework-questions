@@ -3,7 +3,7 @@
 
 	&__container {
 		padding-block: toRem(10);
-		min-height: toRem(150);
+		min-height: toRem(100);
 
 		display: flex;
 		align-items: center;
@@ -42,17 +42,27 @@
 	// .header__button
 
 	&__button {
-		flex-basis: toRem(115);
 		flex-shrink: 0;
+			
+		line-height: 95%;		/* 17.1px */
 
 		position: relative;
 		z-index: 3;
+		border-radius: 8px;
+		border: 1px solid #FF7235;
+		padding-block: toRem(12) toRem(13);
+		padding-inline: toRem(18) toRem(17);
+		color: #FF7235;		
+		&:hover {
+			color: #fff;
+			background-color: #FF7235;
+			transition: all 0.5s;
+		}
 
 		@media (max-width: toRem(653)) {
 			order: 2;			
 		}
-	}
-	
+	}	
 }
 
 
@@ -68,36 +78,8 @@
 
 	// .menu__body
 
-	&__body {
-
-		@media (max-width: toRem(653)){
-			position: fixed;
-			inset-inline-start: 100%;
-			inset-block-start: 0;
-			inline-size: 100%;
-			block-size: 100%;
-			z-index: 2;
-
-			overflow: auto;
-
-			padding: toRem(70) toRem(15) toRem(30);
-
-			background-color: #546232;
-			&::before {
-				content: '';
-				position: fixed;				
-				block-size: toRem(70);
-				inline-size: 100%;
-				inset-inline-start: 100%;
-				inset-block-start: 0;
-				z-index: 100;			
-				background-color: #623232;
-			}
-			
-			
-		}		
+	&__body {			
 	}
-		// 
 
 	// .menu__list
 
@@ -108,11 +90,8 @@
 		flex-wrap: wrap;
 		column-gap: toRem(40);
 		row-gap: toRem(3);
-		@media (max-width:toRem(652)) {
-			flex-direction: column;
-			background-color: transparent;
-			align-items: flex-end;
-			row-gap: toRem(20);
+		@media (max-width:toRem(685)){
+			column-gap: toRem(20)
 		}
 	}
 
@@ -125,34 +104,19 @@
 	// .menu__link
 
 	&__link {			
-		font-size: toRem(18);			
-		line-height: 0,95;/* 17.1px */
+	font-size: toRem(18);			
+	line-height: 0,95;/* 17.1px */
+	@media (any-hover: hover) {
+		&:hover {
+			text-decoration: underline;
+		}
 		&:hover{
 			text-decoration: underline;
 		}
-		@media (max-width:toRem(652)) {
-			font-size: toRem(25);
+	
 		}
 	}
 }
-.open-menu{
-	& .menu__body	{
-		
-				inset-inline-start: 0;
-			}
-	
-	
-}
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -167,10 +131,3 @@
 
 
 
-
-
-/*
-@media (max-width: toRem(1139)){
-	@import "component/menu.scss";
-}
-*/

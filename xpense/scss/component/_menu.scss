@@ -1,3 +1,64 @@
+.menu {
+
+	// .menu__icon
+
+	&__icon {
+		position: relative;
+		z-index: 3;
+	}
+
+	// .menu__body
+
+	&__body {		
+			position: fixed;
+			inset-inline-start: 100%;
+			inset-block-start: 0;
+			inline-size: 100%;
+			block-size: 100%;
+			z-index: 2;
+			overflow: auto;
+			transition: inset-inline-start 0.3s;
+			padding: toRem(70) toRem(15) toRem(30);
+			background-color: #dbab95; //колір подложкі
+
+			&::before {
+				content: '';
+				position: fixed;
+				block-size: toRem(60);
+				inline-size: 100%;
+				inset-inline-start: 100%;
+				inset-block-start: 0;
+				z-index: 36;
+				background-color: #f5c5b1; //колір подложкі шапкі
+				transition: inset-inline-start 0.3s;		
+		}
+	}
+
+	// .menu__list
+
+	&__list {		 
+		flex-direction: column;
+		background-color: transparent;
+		align-items: flex-end;
+		row-gap: toRem(20);
+		
+	}
+
+	// .menu__item
+
+	&__item {
+		@media (max-width:toRem(652)) {
+			font-size: toRem(25);
+		}
+	}
+
+	// .menu__link
+
+	&__link {
+	
+	}
+}
+
 .icon-menu {
 	flex-shrink: 0;
 	flex-basis: 30px;
@@ -20,6 +81,13 @@
 }
 
 .open-menu {
+	& .menu__body {
+			&::before {
+				inset-inline-start: 0;
+			}
+	
+			inset-inline-start: 0;
+	}
 	& .icon-menu {
 		justify-content: center;
 		span {
@@ -35,10 +103,5 @@
 			transform: rotate(-45deg) translateY(toRem(-3));
 		}
 	}
-	/*
-	& .menu__body {
-		&:before {}
-		//inset-inline-start: 0;
-	}
-	*/
+	
 }
