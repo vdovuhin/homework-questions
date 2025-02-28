@@ -19,7 +19,7 @@
 			overflow: auto;
 			transition: inset-inline-start 0.3s;
 			padding: toRem(70) toRem(15) toRem(30);
-			background-color: #dbab95; //колір подложкі
+			background-color: #816e66; //колір подложкі
 
 			&::before {
 				content: '';
@@ -29,7 +29,7 @@
 				inset-inline-start: 100%;
 				inset-block-start: 0;
 				z-index: 36;
-				background-color: #f5c5b1; //колір подложкі шапкі
+				background-color: #c2b9b6; //колір подложкі шапкі
 				transition: inset-inline-start 0.3s;		
 		}
 	}
@@ -47,15 +47,13 @@
 	// .menu__item
 
 	&__item {
-		@media (max-width:toRem(652)) {
-			font-size: toRem(25);
-		}
+	
 	}
 
 	// .menu__link
 
 	&__link {
-	
+		font-size: toRem(28);
 	}
 }
 
@@ -81,6 +79,9 @@
 }
 
 .open-menu {
+	body {
+		overflow: hidden;
+	}
 	& .menu__body {
 			&::before {
 				inset-inline-start: 0;

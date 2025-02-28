@@ -3,20 +3,18 @@
 	// .footer__container
 
 	&__container {
+		padding-block: toRem(100) toRem(90);
 		display: grid;
 		row-gap: toRem(40);
 	}
 
 	// .footer__blok
 
-	&__blok {
-		display: flex;		
-
+	&__blok {		
+		display: flex;
 		column-gap: toRem(175);
-		row-gap: toRem(15);
-		&:last-child {
-			justify-content: end;
-		}
+		row-gap: toRem(23);
+		
 		@media (max-width: toRem(900)){
 			column-gap: toRem(90);
 		}
@@ -66,9 +64,7 @@
 	&__row {
 		display: grid;
 		row-gap: toRem(8);
-		@media (max-width: toRem(555)) {
-			display: none;
-		}
+		
 	}
 
 	// .footer__form

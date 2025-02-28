@@ -1,4 +1,9 @@
 .header {
+	position: fixed;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+
 	// .header__container
 
 	&__container {
@@ -65,8 +70,6 @@
 	}	
 }
 
-
-
 .menu {
 
 	// .menu__icon
@@ -107,13 +110,9 @@
 	font-size: toRem(18);			
 	line-height: 0,95;/* 17.1px */
 	@media (any-hover: hover) {
-		&:hover {
-			text-decoration: underline;
-		}
-		&:hover{
-			text-decoration: underline;
-		}
-	
+			&:hover {
+				text-decoration: underline;
+			}	
 		}
 	}
 }

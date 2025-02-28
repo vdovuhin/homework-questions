@@ -17,7 +17,18 @@
 	}
 }
 .button {
-	
+	border-radius: 8px;
+	border: 1px solid #FF7235;
+	padding-block: toRem(12);
+	padding-inline: toRem(24);	
+	svg {
+		padding-inline-start: toRem(10);
+	}
+	&:hover {
+		color: #FF7235;
+		background-color: #FFF;
+		fill: #FF7235;
+	}				
 }
 
 .active {
@@ -30,13 +41,15 @@
 	font-weight: 600;
 	
 	transition: background-color 0.5s;
-
+	fill: #fff;
 	color: #FFF;
 	font-size: toRem(16);
 	transition: color 0.5s;
+	
 	&:hover{
 		color: #FF7235;
 		background-color: #FFF;
+		fill: #FF7235;
 	}
 }
 
@@ -44,16 +57,27 @@
 
 	// .content__blok
 
-	&__blok {}
+	&__blok {
+		:not(:last-child) {
+			margin-block-end: toRem(24);
+		}
+	}
+
+	// .content__title
+
+	&__sab-title{
+		color: #BDBDBD;
+		@include adaptiveValue("font-size", 22, 14);
+		text-transform: uppercase;
+	}
 
 	// .content__title
 
 	&__title {
 		color:  #292830;
-		@mixin adaptiveValue("font-size", 96, 18);
-		//font-size: toRem(96);		
+		@include adaptiveValue("font-size", 96, 24);	
 		font-weight: 700;
-		margin-block-end: toRem(20);
+		
 	}
 
 	// .content__text
@@ -61,7 +85,17 @@
 	&__text {
 		color:  #BDBDBD;
 		font-size: toRem(24);	
-		margin-block-end: toRem(40);
+		
+		@include adaptiveValue("font-size", 24, 14);
+	}
+
+	// .content__button
+	&__button{
+		display: flex;
+		column-gap: toRem(12);
+		color: #FF7235;		
+		@include adaptiveValue("font-size", 22, 14);
+		stroke: #FF7235;
 	}
 }
 
