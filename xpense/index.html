@@ -7,6 +7,8 @@
 	<meta charset="UTF-8">
 	<!-- Налаштування в'юпорту (адаптиву, масштабу тощо) -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Підключення Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<!-- Підключення окремого файлу стилів -->
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Заголовок сторінки в браузері -->
@@ -39,10 +41,12 @@
 				<div class="hero__container">
 					<div class="hero__blok">
 						<div class="hero__content content">
-							<div class="content__blok">
-								<h1 class="content__title">Track your Expenses to Save Money</h1>
-								<div class="content__text">Helps you to organize your income and expenses</div>
-							</div>							
+							<div class="hero__blok  content__blok">
+								<h1 class="hero__title content__title">Track your Expenses to Save Money</h1>
+								<div class="hero__text content__text">
+									<p>you to organize your income and expenses</p>
+								</div>
+							</div>
 							<div class="hero__buttons">
 								<a href="#" class="hero__button active">Try free demo
 									<img src="img/svg/akar-icons.svg" alt="akar">
@@ -56,10 +60,461 @@
 					</div>
 				</div>
 			</section>
+			<div class="page__picture picture">
+				<div class="picture__container">
+					<img class="picture__img" src="img/picture.png" alt="img">
+				</div>
+			</div>
+			<div class="page__brands brands">
+				<div class="brands__container">
+					<ul class="brands__items">
+						<li class="brands__item">
+							<img class="brands__img" src="img/brands/facebook.png" alt="facebook">
+						</li>
+						<li class="brands__item">
+							<img class="brands__img" src="img/brands/google.png" alt="google">
+						</li>
+						<li class="brands__item">
+							<img class="brands__img" src="img/brands/coca-cola.png" alt="coca-cola">
+						</li>
+						<li class="brands__item">
+							<img class="brands__img" src="img/brands/linkedin.png" alt="linkedin">
+						</li>
+						<li class="brands__item">
+							<img class="brands__img" src="img/brands/samsung.png" alt="samsung">
+						</li>
+					</ul>
+				</div>
+			</div>
+			<section class="page__support support">
+				<div class="support__container">
+					<div class="support__content content">
+						<div class="content__blok">
+							<p class="content__sab-title">Alwalys online</p>
+							<h2 class="content__title">Real-time support with cloud</h2>
+							<div class="content__text">
+								<p>
+									Tellus lacus morbi sagittis lacus in. Amet nisl at mauris enim accumsan nisi, tincidunt vel. Enim
+									ipsum, amet quis
+									ullamcorper eget ut.
+								</p>
+							</div>
+							<a href="#" class="content__button">Learn more
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path d="M4 12H20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M13 5L20 12L13 19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="support__imeg">
+						<img src="img/support.png" alt="img">
+					</div>
+				</div>
+				<div class="support__container">
+					<div class="support__content content">
+						<div class="content__blok">
+							<p class="content__sab-title">free some cost</p>
+							<h2 class="content__title">Save cost for you and family</h2>
+							<div class="content__text">
+								<p>
+									Tellus lacus morbi sagittis lacus in. Amet nisl at mauris enim accumsan nisi, tincidunt vel. Enim
+									ipsum, amet quis
+									ullamcorper eget ut.
+								</p>
+							</div>
+							<a href="#" class="content__button">Learn more
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path d="M4 12H20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M13 5L20 12L13 19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="support__imeg">
+						<img src="img/sava.png" alt="img">
+					</div>
+				</div>
+				<div class="support__container">
+					<div class="support__content content">
+						<div class="content__blok">
+							<p class="content__sab-title">Use anytime</p>
+							<h2 class="content__title">Use anytime when you need</h2>
+							<div class="content__text">
+								<p>
+									Tellus lacus morbi sagittis lacus in. Amet nisl at mauris enim accumsan nisi, tincidunt vel. Enim
+									ipsum, amet quis
+									ullamcorper eget ut.
+								</p>
+							</div>
+							<a href="#" class="content__button">Learn more
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path d="M4 12H20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M13 5L20 12L13 19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="support__imeg">
+						<img src="img/anytime.png" alt="img">
+					</div>
+				</div>
+			</section>
+			<section class="page__product product">
+				<div class="product__container">
+					<div class="product__blok">
+						<div class="product__content content">
+							<div class="content__blok">
+								<h2 class="content__title">The Product we work with.</h2>
+							</div>
+						</div>
+						<div class="product__text">
+							<p>
+								Tellus lacus morbi sagittis lacus in. Amet nisl at mauris enim aumsan nisi, tincidunt vel. Enim ipsum,
+								at
+								quis
+								ullamcorper eget ut.
+							</p>
+						</div>
+					</div>
+					<ul class="product__items">
+						<li class="product__item column-product">
+							<div class="column-product__icon">
+								<img src="img/svg/phonelink.svg" alt="phonelink">
+							</div>
+							<h3 class="column-product__title">Cross platform</h3>
+							<div class="column-product__text">
+								<p>
+									Elit esse cillum dolore eu fugiat nulla pariatur
+								</p>
+							</div>
+						</li>
+						<li class="product__item column-product">
+							<div class="column-product__icon">
+								<img src="img/svg/cloud-queue.svg" alt="phonelink">
+							</div>
+							<h3 class="column-product__title">Cloud server</h3>
+							<div class="column-product__text">
+								<p>
+									Elit esse cillum dolore eu fugiat nulla pariatur
+								</p>
+							</div>
+							<img src="img/svg/arrow-right.svg" alt="phonelink">
+						</li>
+						<li class="product__item column-product">
+							<div class="column-product__icon">
+								<img src="img/svg/backpack.svg" alt="phonelink">
+							</div>
+							<h3 class="column-product__title">Pure Javascript</h3>
+							<div class="column-product__text">
+								<p>
+									Elit esse cillum dolore eu fugiat nulla pariatur
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="page__choice choice">
+				<div class="choice__container">
+					<div class="choice__content content">
+						<div class="content">
+							<h2 class="content__title">Choose your flexible plan.</h2>
+						</div>
+					</div>
+					<div class="choice__columns">
+						<div class="choice__column column-choice">
+							<div class="column-choice__icon">
+								<img src="img/svg/card-travel.svg" alt="icon">
+							</div>
+							<h3 class="column-choice__title">Starter Plan</h3>
+							<ul class="column-choice__items">
+								<li class="column-choice__item">Store unlimited data</li>
+								<li class="column-choice__item">Export to pdf, xls, csv</li>
+								<li class="column-choice__item">Cloud server support</li>
+							</ul>
+							<p class="column-choice__sab-title">$9.99/<span>year</span></p>
+							<p class="column-choice__text">up to 3 user + 1.99 per user</p>
+							<a href="#" class="column-choice__button button">
+								Get this
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+									<path d="M16.01 11H4V13H16.01V16L20 12L16.01 8V11Z" />
+								</svg>
+							</a>
+						</div>
+						<div class="choice__column column-choice column-choice--activ">
+							<div class="column-choice__icon">
+								<img src="img/svg/bg.svg" alt="icon">
+							</div>
+							<h3 class="column-choice__title">Sliver Plan</h3>
+							<ul class="column-choice__items">
+								<li class="column-choice__item">Store unlimited data</li>
+								<li class="column-choice__item">Export to pdf, xls, csv</li>
+								<li class="column-choice__item">Cloud server support</li>
+							</ul>
+							<p class="column-choice__sab-title">$19.99/<span>year</span></p>
+							<p class="column-choice__text">up to 3 user + 1.99 per user</p>
+							<a href="#" class="column-choice__button active">
+								Get this
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+									<path d="M16.01 11H4V13H16.01V16L20 12L16.01 8V11Z" />
+								</svg>
+							</a>
+						</div>
+						<div class="choice__column column-choice">
+							<div class="column-choice__icon">
+								<img src="img/svg/bg_1.svg" alt="icon">
+							</div>
+							<h3 class="column-choice__title">Diamond Plan</h3>
+							<ul class="column-choice__items">
+								<li class="column-choice__item">Store unlimited data</li>
+								<li class="column-choice__item">Export to pdf, xls, csv</li>
+								<li class="column-choice__item">Cloud server support</li>
+							</ul>
+							<p class="column-choice__sab-title">$29.99/<span>year</span></p>
+							<p class="column-choice__text">up to 3 user + 1.99 per user</p>
+							<a href="#" class="column-choice__button button">
+								Get this
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+									<path d="M16.01 11H4V13H16.01V16L20 12L16.01 8V11Z" />
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__wisher wisher">
+				<div class="wisher__container">
+					<div class="wisher__content content">
+						<div class="content">
+							<h2 class="content__title">We have millions of best wishers</h2>
+						</div>
+					</div>
+				</div>
+				<!-- Slider main container -->
+				<div class="swiper">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide">
+							<p class="test" >Slide 1</p>
+						</div>
+						<div class="swiper-slide">
+							<p class="test">Slide 2</p>
+						</div>
+						<div class="swiper-slide">
+							<p class="test">Slide 3</p>
+						</div>
+						<div class="swiper-slide">
+							<p class="test">Slide 4</p>
+						</div>
+						<div class="swiper-slide">
+							<p class="test">Slide 5</p>
+						</div>
+						<div class="swiper-slide">
+							<p class="test">Slide 6</p>
+						</div>
+						
+					</div>
+					<!-- If we need pagination -->
+					<div class="swiper-pagination"></div>
+				
+					<!-- If we need navigation buttons -->
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				
+					<!-- If we need scrollbar -->
+					<div class="swiper-scrollbar"></div>
+				</div>
+			<!--
+				<div class="wisher__slide slide swiper">
+					<div class="slide__wiper-wrapper swiper-wrapper">
 
-
+						<article class="slide__swiper-slide swiper-slide">
+							<h3 class="slide__titel">
+								Eleifend fames amet, fames enim. Ullamcorper pellentesque ac volutpat nibh aliquet et, ut netus. Vel,
+								fringilla sit eros
+								pretium felis massa mauris, aliquam congue.
+							</h3>
+							<div class="slide__user user">
+								<div class="user__img">
+									<img src="img/foto.png" alt="user">
+								</div>
+								<h4 class="user__titel">
+									Cameron Williamson,<span>CEO</span>
+								</h4>
+							</div>
+						</article>
+						<article class="slide__swiper-slide swiper-slide">
+							<h3 class="slide__titel">
+								Eleifend fames amet, fames enim. Ullamcorper pellentesque ac volutpat nibh aliquet et, ut netus. Vel,
+								fringilla sit eros
+								pretium felis massa mauris, aliquam congue.
+							</h3>
+							<div class="slide__user user">
+								<div class="suser__img">
+									<img src="img/foto.png" alt="user">
+								</div>
+								<h4 class="user__titel">
+									Cameron Williamson,<span>CEO</span>
+								</h4>
+							</div>
+						</article>
+						<article class="slide__swiper-slide swiper-slide">
+							<h3 class="slide__titel">
+								Eleifend fames amet, fames enim. Ullamcorper pellentesque ac volutpat nibh aliquet et, ut netus. Vel,
+								fringilla sit eros
+								pretium felis massa mauris, aliquam congue.
+							</h3>
+							<div class="slide__user user">
+								<div class="user__img">
+									<img src="img/foto_03.png" alt="user">
+								</div>
+								<h4 class="user__titel">
+									Cameron Williamson,<span>CEO</span>
+								</h4>
+							</div>
+						</article>
+						<article class="slide__swiper-slide swiper-slide">
+							<h3 class="slide__titel">
+								Eleifend fames amet, fames enim. Ullamcorper pellentesque ac volutpat nibh aliquet et, ut netus. Vel,
+								fringilla sit eros
+								pretium felis massa mauris, aliquam congue.
+							</h3>
+							<div class="slide__user user">
+								<div class="user__img">
+									<img src="img/foto_04.png" alt="user">
+								</div>
+								<h4 class="user__titel">
+									Cameron Williamson,<span>CEO</span>
+								</h4>
+							</div>
+						</article>
+						<article class="slide__swiper-slide swiper-slide">
+							<h3 class="slide__titel">
+								Eleifend fames amet, fames enim. Ullamcorper pellentesque ac volutpat nibh aliquet et, ut netus. Vel,
+								fringilla sit eros
+								pretium felis massa mauris, aliquam congue.
+							</h3>
+							<div class="slide__user user">
+								<div class="suser__img">
+									<img src="img/foto_05.png" alt="user">
+								</div>
+								<h4 class="user__titel">
+									Cameron Williamson,<span>CEO</span>
+								</h4>
+							</div>
+						</article>
+					
+						<article class="slide__swiper-slide swiper-slide">
+							<h3 class="slide__titel">
+								Eleifend fames amet, fames enim. Ullamcorper pellentesque ac volutpat nibh aliquet et, ut netus. Vel,
+								fringilla sit eros
+								pretium felis massa mauris, aliquam congue.
+							</h3>
+							<div class="slide__user user">
+								<div class="user__img">
+									<img src="img/foto.png" alt="user">
+								</div>
+								<h4 class="user__titel">
+									Cameron Williamson,<span>CEO</span>
+								</h4>
+							</div>
+						</article>
+						<article class="slide__swiper-slide swiper-slide">
+							<h3 class="slide__titel">
+								Eleifend fames amet, fames enim. Ullamcorper pellentesque ac volutpat nibh aliquet et, ut netus. Vel,
+								fringilla sit eros
+								pretium felis massa mauris, aliquam congue.
+							</h3>
+							<div class="slide__user user">
+								<div class="suser__img">
+									<img src="img/foto.png" alt="user">
+								</div>
+								<h4 class="user__titel">
+									Cameron Williamson,<span>CEO</span>
+								</h4>
+							</div>
+						</article>
+						<article class="slide__swiper-slide swiper-slide">
+							<h3 class="slide__titel">
+								Eleifend fames amet, fames enim. Ullamcorper pellentesque ac volutpat nibh aliquet et, ut netus. Vel,
+								fringilla sit eros
+								pretium felis massa mauris, aliquam congue.
+							</h3>
+							<div class="slide__user user">
+								<div class="user__img">
+									<img src="img/foto_03.png" alt="user">
+								</div>
+								<h4 class="user__titel">
+									Cameron Williamson,<span>CEO</span>
+								</h4>
+							</div>
+						</article>
+						<article class="slide__swiper-slide swiper-slide">
+							<h3 class="slide__titel">
+								Eleifend fames amet, fames enim. Ullamcorper pellentesque ac volutpat nibh aliquet et, ut netus. Vel,
+								fringilla sit eros
+								pretium felis massa mauris, aliquam congue.
+							</h3>
+							<div class="slide__user user">
+								<div class="user__img">
+									<img src="img/foto_04.png" alt="user">
+								</div>
+								<h4 class="user__titel">
+									Cameron Williamson,<span>CEO</span>
+								</h4>
+							</div>
+						</article>
+						<article class="slide__swiper-slide swiper-slide">
+							<h3 class="slide__titel">
+								Eleifend fames amet, fames enim. Ullamcorper pellentesque ac volutpat nibh aliquet et, ut netus. Vel,
+								fringilla sit eros
+								pretium felis massa mauris, aliquam congue.
+							</h3>
+							<div class="slide__user user">
+								<div class="suser__img">
+									<img src="img/foto_05.png" alt="user">
+								</div>
+								<h4 class="user__titel">
+									Cameron Williamson,<span>CEO</span>
+								</h4>
+							</div>
+						</article>
+						
+					</div>
+				</div>
+			-->
+				
+				<div class="swiper-pagination"></div>
+			</section>
+			<section class="page__downloaded downloaded ">
+				<div class="downloaded__container">
+					<div class="downloaded__content ">
+						<h2 class="downloaded__title">20M+ downloaded from 32 diffrent countires</h2>
+						<div class="downloaded__text">
+							<p>Try demo for 7 days with full features.</p>
+						</div>
+						<button type="button" class="downloaded__button">
+							Try free demo
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+								<path d="M4 9L12 17L20 9" stroke="#FF7235" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+						</button>
+					</div>
+					<div class="downloaded__imeg">
+						<div class="downloaded__imeg-left">
+							<img src="img/downloaded-left.png" alt="imeg-left">
+						</div>
+						<div class="downloaded__imeg-ref">
+							<img src="img/downloaded-ref.png" alt="imeg-re">
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
-		<!--TODO // Реализовати слайдер  тоесь пти нажимания на текст показоваля другой списокк-->
+
 		<footer class="footer">
 			<div class="footer__container">
 				<div class="footer__blok">
@@ -139,7 +594,12 @@
 			</div>
 		</footer>
 	</div>
+	<!-- Підключення Swiper --> 
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<!-- Підключення окремого файлу JS з кодом -->
 	<script src="js/script.js"></script>
 </body>
 
 </html>
+
+
